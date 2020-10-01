@@ -17,18 +17,20 @@ function getUserById(id) {
 function createUser(name,bio) {
 	const payload = {
 		id: String(users.length + 1),
-		...name,...bio
+		...name,
+		...bio
 	}
 
 	users.push(payload)
 	return payload
 }
 
-function updateUser(id, data) {
+function updateUser(id, name,bio) {
 	const index = users.findIndex(u => u.id === id)
 	users[index] = {
 		...users[index],
-		...data,
+		...name,
+		...bio
 	}
 	
 	return users[index]

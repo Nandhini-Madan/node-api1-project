@@ -60,7 +60,7 @@ server.post("/users", (req, res) => {
         }
         else {
             res.status(404).json({
-                message: "The user with the specified ID does not exist."
+                message: "The users not defined"
             })
         }
     }
